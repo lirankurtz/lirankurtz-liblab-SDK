@@ -21,7 +21,7 @@ export default class BaseAPI {
 			},
 		});
 	}
-	_parseOptions(queryOptions) {
+	_parseOptions(queryOptions = {}) {
 		let queryString = '';
 		Object.values(queryOptions).forEach(option => {
 			const optionUriString = option.buildUriString();
