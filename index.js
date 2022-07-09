@@ -1,10 +1,3 @@
-// export default function unicornFun(input, {postfix = 'rainbows'} = {}) {
-// 	if (typeof input !== 'string') {
-// 		throw new TypeError(`Expected a string, got ${typeof input}`);
-// 	}
-
-// 	return `${input} & ${postfix}`;
-// }
 
 import { Book, Movie, Character, Quote, Chapter } from './api-modules/lotr-apis.js';
 import { Filter, Sort, Pagination } from './api-options/lotr-api-options.js';
