@@ -1,6 +1,6 @@
 {
 	"name": "lirankurtz-liblab-sdk",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Liran LibLab task",
 	"license": "MIT",
 	"repository": "https://github.com/lirankurtz/lirankurtz-liblab-SDK",
@@ -17,7 +17,9 @@
 		"test": "xo && ava"
 	},
 	"files": [
-		"index.js"
+		"index.js",
+		"./api-modules",
+		"./api-options"
 	],
 	"keywords": [
 		"unicorn",
