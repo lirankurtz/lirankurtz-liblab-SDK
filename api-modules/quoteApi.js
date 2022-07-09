@@ -1,5 +1,5 @@
 import BaseAPI from "./baseApi.js";
-import { Movie } from "./lotr-apis.js";
+import { Character, Movie } from "./lotr-apis.js";
 import fetch from "node-fetch";
 
 export default class QuoteAPI extends BaseAPI {
@@ -15,6 +15,17 @@ export default class QuoteAPI extends BaseAPI {
 		});
 		const queryString = this._parseOptions(queryOptions);
 		return fetch(`${movieApi.uri}/${movieId}/quote${queryString}`, {
+			headers: {
+				'Authorization': `Bearer ${this.token}`,
+			},
+		});
+	}
+	getAllForCharacter(characterId, queryOptions) {
+		const characterApi = new Character({
+			token: this.token
+		})
+		const queryString = this._parseOptions(queryOptions);
+		return fetch(`${characterApi.uri}/${characterId}/quote${queryString}`, {
 			headers: {
 				'Authorization': `Bearer ${this.token}`,
 			},
